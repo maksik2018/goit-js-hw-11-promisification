@@ -1,0 +1,1 @@
+{"version":3,"sources":["sass/_example.scss"],"names":[],"mappings":"AAAA,GACE,aAAA,CACA,iBAAA,CACA","file":"src.23c14ccf.css","sourceRoot":"../src","sourcesContent":["h1 {\n  color: blueviolet;\n  text-align: center;\n  margin-top: 200px;\n}\n"]}

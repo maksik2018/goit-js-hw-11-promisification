@@ -7,4 +7,4 @@ const o=(o,t)=>Math.floor(Math.random()*(t-o+1)+o),t=t=>new Promise((n,a)=>{cons
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./partials/task2"),require("./partials/task3");const e=e=>new Promise(s=>{setTimeout(()=>{s(e)},e)}),s=e=>console.log(`Fulfilled after ${e}ms`);e(2e3).then(s),e(1e3).then(s),e(1500).then(s);
 },{"./sass/main.scss":"clu1","./partials/task2":"zIO9","./partials/task3":"rEyu"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-11-promisification-/src.3ec9a421.js.map
+//# sourceMappingURL=/goit-js-hw-11-promisification-/src.cb6bae33.js.map
