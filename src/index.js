@@ -1,28 +1,30 @@
 import './sass/main.scss';
 
+import './partials/task2';
+ 
+import './partials/task3';
 
-const startBtn = document.querySelector('[data-action="start"]');
-const stopBtn = document.querySelector('[data-action="stop"]');
-const bodyEl = document.querySelector('body');
+// Подзадание 1
+// Напиши функцию delay(ms), которая возвращает промис, переходящий в состояние "resolved" через ms миллисекунд. 
+// Значением исполнившегося промиса должно быть то кол - во миллисекунд которое передали во время вызова функции delay.
 
-let timerId = null;
-
-startBtn.addEventListener("click", () => {
-  timerId = setInterval(() => {
-      startBtn.setAttribute('disabled', 'disabled');
-      bodyEl.style.background = getRandomHexColor();
-  }, 1000);
-    console.log(`interval with id ${timerId} started`);
-});
-
-stopBtn.addEventListener("click", () => {
-    clearInterval(timerId);
-    startBtn.removeAttribute('disabled', 'disabled');
-  console.log(`Interval with id ${timerId} has stopped!`);
-});
-
-
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+const delay = ms => {
+  // Change this function
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(ms);
+    }, ms);
+ 
+  
+  });
 }
+
+const logger = time => console.log(`Fulfilled after ${time}ms`);
+
+// Tests
+delay(2000).then(logger); // Fulfilled after 2000ms
+delay(1000).then(logger); // Fulfilled after 1000ms
+delay(1500).then(logger); // Fulfilled after 1500ms
+
+
 
